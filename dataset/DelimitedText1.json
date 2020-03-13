@@ -1,0 +1,89 @@
+{
+	"name": "DelimitedText1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Export_Prime.csv",
+				"container": "data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Prime_Name",
+				"type": "String"
+			},
+			{
+				"name": "Plant_Name",
+				"type": "String"
+			},
+			{
+				"name": "Premium",
+				"type": "String"
+			},
+			{
+				"name": "Melt_Class_Name",
+				"type": "String"
+			},
+			{
+				"name": "SI",
+				"type": "String"
+			},
+			{
+				"name": "FE",
+				"type": "String"
+			},
+			{
+				"name": "CU",
+				"type": "String"
+			},
+			{
+				"name": "MN",
+				"type": "String"
+			},
+			{
+				"name": "MG",
+				"type": "String"
+			},
+			{
+				"name": "CR",
+				"type": "String"
+			},
+			{
+				"name": "TI",
+				"type": "String"
+			},
+			{
+				"name": "ZN",
+				"type": "String"
+			},
+			{
+				"name": "ZR",
+				"type": "String"
+			},
+			{
+				"name": "AG",
+				"type": "String"
+			},
+			{
+				"name": "V",
+				"type": "String"
+			},
+			{
+				"name": "LI",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

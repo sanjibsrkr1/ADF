@@ -1,0 +1,31 @@
+{
+	"name": "AzureSqlTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Prime_Name\r\nPrime_name]",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Plant",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Premium",
+				"type": "float",
+				"precision": 15
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "prime"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
