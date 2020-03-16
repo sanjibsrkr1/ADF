@@ -1,0 +1,24 @@
+{
+	"name": "Dest",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "TargetDB",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"TableName": {
+				"type": "string",
+				"defaultValue": "[SalesLT].[Product]"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().TableName",
+				"type": "Expression"
+			}
+		}
+	}
+}

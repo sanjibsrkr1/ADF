@@ -1,0 +1,25 @@
+{
+	"name": "ForeachSource",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Tablename1": {
+				"type": "string",
+				"defaultValue": "[SalesLT].[Product]"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "",
+			"table": {
+				"value": "@dataset().Tablename1",
+				"type": "Expression"
+			}
+		}
+	}
+}
