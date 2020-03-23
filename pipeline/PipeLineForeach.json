@@ -144,7 +144,10 @@
 									"referenceName": "ForeachSource",
 									"type": "DatasetReference",
 									"parameters": {
-										"Tablename1": "@item().name"
+										"Tablename1": {
+											"value": "@substring(item().name,7,sub(length(item().name),7))",
+											"type": "Expression"
+										}
 									}
 								}
 							],
@@ -153,7 +156,7 @@
 									"referenceName": "Dest",
 									"type": "DatasetReference",
 									"parameters": {
-										"TableName": "@item().name"
+										"TableName": "\t\n@substring(item().name,7,sub(length(item().name),7))"
 									}
 								}
 							]
@@ -167,6 +170,9 @@
 				"type": "Array"
 			},
 			"FilteredTableName": {
+				"type": "Array"
+			},
+			"TableName1": {
 				"type": "Array"
 			}
 		},
